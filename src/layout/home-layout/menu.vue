@@ -99,7 +99,7 @@ export default {
     display: flex;
     align-items: center;
     img {
-      height: 32px;
+      height: 50px;
     }
   }
   .menus {
