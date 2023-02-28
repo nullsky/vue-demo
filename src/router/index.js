@@ -1,4 +1,4 @@
-import RouterModuleName from './module.js';
+import { RouterModuleName } from './module.js';
 import { createRouter, createWebHashHistory } from 'vue-router';
 
 // 路由信息
@@ -17,7 +17,19 @@ const routes = [
       {
         path: '/knowledge',
         name: RouterModuleName.Knowledge,
-        component: () => import('../pages/knowledge')
+        component: () => import('../pages/knowledge'),
+        children: [
+          {
+            path: 'jsonFormatter',
+            name: RouterModuleName.ToolOnlineJSONFormatter,
+            component: () => import('../pages/knowledge/mainArea/online-json-formatter.vue')
+          },
+          {
+            path: 'jsEditor',
+            name: RouterModuleName.ToolOnlineJSEditor,
+            component: () => import('../pages/knowledge/mainArea/online-js-editor.vue')
+          }
+        ]
       },
       {
         path: '/about',

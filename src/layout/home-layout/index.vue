@@ -1,8 +1,10 @@
 <template lang="">
-  <div class="container">
+  <header>
     <Menu />
+  </header>
+  <section style="display: flex; flex-direction: row;">
     <router-view />
-  </div>
+  </section>
 </template>
 <script>
 import Menu from './menu.vue';
@@ -13,7 +15,7 @@ export default {
   }
 }
 </script>
-<style lang="css">
+<style lang="scss" scoped>
 .container{
   background-color: #EDF1F7;
 }

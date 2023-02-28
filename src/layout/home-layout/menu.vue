@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import RouterModuleName from '../../router/module.js'
+import { RouterModuleName } from '../../router/module.js'
 const menuItems = [{
   key: "knowledge",
   label: "知识库"
@@ -49,7 +49,8 @@ export default {
   data() {
     return {
       menuItems,
-      activeIndex: ''
+      activeIndex: '',
+      userProfile:'',
     }
   },
   watch: {
@@ -83,7 +84,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .menu-container {
   position: relative;
@@ -103,6 +104,7 @@ export default {
     }
   }
   .menus {
+    height: 56px;
     margin-left: 24px;
   }
   .icon-menu {
