@@ -95,6 +95,9 @@ export default {
   display: flex;
   align-items: center;
   padding: 0 24px;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 600;
   font-size: 15px;
   .logo__wrapper {
     display: flex;
