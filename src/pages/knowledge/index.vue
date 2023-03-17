@@ -14,7 +14,7 @@
 </main>
 </template>
 <script>
-import { RouterModules } from '../../router/module.js'
+import { RouterModules } from '../../router/module'
 const menuConfig = [
   {
     key: RouterModules.ToolOnlineJSEditor.name,

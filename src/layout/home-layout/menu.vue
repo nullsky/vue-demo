@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { RouterModuleName } from '../../router/module.js'
+import { RouterModuleName } from '../../router/module'
 const menuItems = [{
   key: "knowledge",
   label: "知识库"
@@ -56,7 +56,9 @@ export default {
   watch: {
     $route(val,oldval){
         console.log(val.name);
-        this.activeIndex = routeNameMap[val.name];
+        if (routeNameMap[val.name]) {
+          this.activeIndex = routeNameMap[val.name];
+        }
       }
   },
   methods: {

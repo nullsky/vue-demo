@@ -1,4 +1,4 @@
-import { RouterModuleName } from './module.js';
+import { RouterModuleName } from './module';
 import { createRouter, createWebHashHistory } from 'vue-router';
 
 // 路由信息
@@ -6,18 +6,18 @@ const routes = [
   {
     path: '/',
     name: RouterModuleName.Root,
-    component: () => import('../layout/home-layout'),
+    component: () => import('../layout/home-layout/index.vue'),
     redirect: '/home',
     children: [
       {
         path: '/home',
         name: RouterModuleName.HomePage,
-        component: () => import('../pages/home')
+        component: () => import('../pages/home/index.vue')
       },
       {
         path: '/knowledge',
         name: RouterModuleName.Knowledge,
-        component: () => import('../pages/knowledge'),
+        component: () => import('../pages/knowledge/index.vue'),
         children: [
           {
             path: 'jsonFormatter',
@@ -34,7 +34,7 @@ const routes = [
       {
         path: '/about',
         name: RouterModuleName.About,
-        component: () => import('../pages/about')
+        component: () => import('../pages/about/index.vue')
       }
     ]
   }

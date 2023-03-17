@@ -9,7 +9,7 @@ import './assets/fonts/index.css'
 const app = createApp(App)
 app.use(ElementPlus)
 app.use(router)
-Object.keys(ElIconModules).forEach(function (name) {
-  app.component(name, ElIconModules[name])
+Object.keys(ElIconModules).forEach( key => {
+  app.component(key, ElIconModules[key])
 })
 app.mount('#app')
